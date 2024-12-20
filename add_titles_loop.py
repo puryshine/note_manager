@@ -1,7 +1,7 @@
 from add_list import heads
 zapros = input("добавьте заголовок, для отмены оставьте строчку пустой")
-while zapros != '':
-    heads.append(zapros)
+while zapros != '':      # цикл для реализации повторного запроса заголовка
+    heads.append(zapros) # добавляем новый заголовок в конец списка, если таковой имеется
     print(*heads)
     zapros = input("добавьте заголовок, для отмены оставьте строчку пустой")
 print(*heads)
