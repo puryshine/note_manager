@@ -2,4 +2,4 @@ first_add, second_add, third_add = input('Введите первый загол
     input('Введите второй заголовок'), \
     input('Введите третий заголовок')
 heads = [first_add, second_add, third_add]
-print(f'{heads})
+print(f'{heads}')
