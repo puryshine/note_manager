@@ -21,10 +21,6 @@ print(*note[9])
 print(note[10])
 print(*note[11])
 
- # print(*note, sep='\n')
-
-
-
 
 _ = ''  # случайная переменная
 while _ != 50:
