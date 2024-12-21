@@ -8,13 +8,13 @@ from update_status import update_status
 
 
 # данный фаил объединяет все предущие в один формат
-note = ["Название заметки:", add_input.title,
+note = {"Название заметки:", add_input.title,
         "Заголовки:", heads,
         "Содержание заметки:", add_input.content,
         "Статус заметки:", status_.status,
         "Дата создания:", date_changer(add_input.created_date),
         "Дата окончания", date_changer(add_input.issue_date)
-        ]
+        }
 print(*note[0:3], sep='\n')
 print(*note[3])
 print(*note[4:9], sep='\n')
@@ -23,8 +23,7 @@ print(note[10])
 print(*note[11])
 
 
-# _ = ''  # случайная переменная
-# while _ != 50:
+# while True:
 #     if input("Желаете изменить статус заметки? Да/Нет").lower() == 'да':
 #         reload(status_)
 #         print(note)     # не работает не представляю почему ;(
