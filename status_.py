@@ -2,7 +2,7 @@ status_lib = {"а": 'Активный', "о": 'Отменен', "з": 'Заве�
 status_temp = input("Введите статус заметки буквой: А — Активный, О — Отменен, З — Завершен").lower()
 status_count = False
 while status_count == False:
-    if status_temp != "а" and status_temp != "о" and status_temp != "к":
+    if status_temp != "а" and status_temp != "о" and status_temp != "з":
         status_temp = input("Введите статус заметки буквой: А — Активный, О — Отменен, З — Завершен").lower()
     else:
         status_count = True
