@@ -1,9 +1,9 @@
-from importlib import reload
 from date_changer import date_changer
 import add_input
 import status_
 from add_list import heads
-from update_status import update_status
+
+# from update_status import update_status
 
 
 
@@ -23,8 +23,6 @@ print(note[10])
 print(*note[11])
 
 
-# while True:
-#     if input("Желаете изменить статус заметки? Да/Нет").lower() == 'да':
-#         reload(status_)
-#         print(note)     # не работает не представляю почему ;(
-# update_status(int(input()))
+
+# update_status(input())
+
