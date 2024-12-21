@@ -1,4 +1,5 @@
 from add_list import heads
+heads = list(heads)
 zapros = input("Добавьте заголовок, для отмены оставьте строчку пустой")
 while zapros != '':      # цикл для реализации повторного запроса заголовка
     if zapros not in heads: # отсечение повторов
