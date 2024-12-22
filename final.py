@@ -4,7 +4,7 @@ import add_input
 import status_
 from add_list import heads
 
-# from update_status import update_status
+from update_status import update_status
 
 
 # данный фаил объединяет все предущие в один формат
@@ -23,4 +23,5 @@ print(*note["дата создания"])
 print("\nДата окончания:")
 print(*note["дата окончания"])
 
-# update_status(input())
+update_status(input())
+print(note["статус"])
