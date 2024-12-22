@@ -1,4 +1,4 @@
-from datechanger import datechanger #используется не date_changer, тк при его создании обязателен тест, что излишне
+from datechanger import datechanger  # используется не date_changer, тк при его создании обязателен тест, что излишне
 # для формата final
 import add_input
 import status_

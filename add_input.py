@@ -1,9 +1,8 @@
 from datetime import datetime
 from datetime import date
 
-
-title = input("Введите заголовок заметки:",)
-content = input("Введите описание заметки:" )
+title = input("Введите заголовок заметки:", )
+content = input("Введите описание заметки:")
 
 # status_lib = {"а": 'Активный', "о": 'Отменен', "к": 'Крайне важный'}
 # status_temp = input("Введите статус заметки буквой: А — Активный, О — Отменен, К — Крайне важный").lower()
@@ -21,7 +20,7 @@ created_date_day = input("Введите день создания заметк�
 created_date_month = input("Введите месяц создания заметки:")
 created_date_year = input("Введите год создания заметки:")
 while len(created_date_year) < 4:
-    created_date_year = "0" + created_date_year
+    created_date_year = "0" + created_date_year  # если введенно значение менее четырехзначного, программа подтянет нули
 created_date_temp = created_date_day + '-' + created_date_month + '-' + created_date_year
 created_date = datetime.strptime(created_date_temp, '%d-%m-%Y')
 
@@ -31,5 +30,4 @@ issue_date_year = input("Введите год истечения заметки
 while len(issue_date_year) < 4:
     issue_date_year = "0" + issue_date_year
 issue_date_temp = issue_date_day + '-' + issue_date_month + '-' + issue_date_year
-issue_date = datetime.strptime(issue_date_temp, '%d-%m-%Y')         #функция strptime переводит str в datetime
-
+issue_date = datetime.strptime(issue_date_temp, '%d-%m-%Y')  # функция strptime переводит str в datetime

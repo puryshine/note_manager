@@ -8,6 +8,7 @@ while status_count == False:
     else:
         status_count = True
 
-status=(status_lib[status_temp]) #защита, чтобы один из трех вариантов всё-же выбрали и программа не улетала в ошибку
+status = (
+status_lib[status_temp])  # защита, чтобы один из трех вариантов всё-же выбрали и программа не улетала в ошибку
 
 print(status)
