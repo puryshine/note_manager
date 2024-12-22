@@ -16,9 +16,14 @@ content = input("Введите описание заметки:" )
 # status=(status_lib[status_temp]) #защита от дурочка, чтобы один из трех всё-же выбрали и программа не улетала в ошибку
 # функция статуса перенесена в модуль status_ для использования в final.py
 
-created_date_temp = date.today()                # временное значение, что возвращает день создания заметки
-created_date = created_date_temp                # константа, дабы дата не изменилась
 
+created_date_day = input("Введите день создания заметки:")
+created_date_month = input("Введите месяц создания заметки:")
+created_date_year = input("Введите год создания заметки:")
+while len(created_date_year) < 4:
+    created_date_year = "0" + created_date_year
+created_date_temp = created_date_day + '-' + created_date_month + '-' + created_date_year
+created_date = datetime.strptime(created_date_temp, '%d-%m-%Y')
 
 issue_date_day = input("Введите день истечения заметки:")
 issue_date_month = input("Введите месяц истечения заметки:")

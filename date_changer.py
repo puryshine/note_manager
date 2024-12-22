@@ -1,6 +1,6 @@
 from datetime import datetime
 from datetime import date
-def date_changer(_):
+def datechanger(_):
     return(_.day, _.month)            # Предоставление даты в формате: "день месяц"
 
 test_date_day = input("Введите день:")
@@ -11,4 +11,4 @@ while len(test_date_year) < 4:
 test_date_temp = test_date_day + '-' + test_date_month + '-' + test_date_year
 test_date = datetime.strptime(test_date_temp, '%d-%m-%Y')         # Функция strptime переводит str в datetime
 
-print(*date_changer(test_date))
+print(*datechanger(test_date))

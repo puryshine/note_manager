@@ -1,19 +1,19 @@
 # функциональность статуса на основе данных
 import status_
 
-def update_status(): # :) нет слов и идей. Всё что я пробовал, в finals не работает, тк импорт не перезаписывается
+def update_status(request): # :) нет слов и идей. Всё что я пробовал, в finals не работает, тк импорт не перезаписывается
     while True:
         if request == 'да':
             status_lib = {"а": 'Активный', "о": 'Отменен', "з": 'Завершен'}
             status_temp = input("Введите статус заметки буквой: А — Активный, О — Отменен, З — Завершен").lower()
-
-            while True:
+            status_count = False
+            while status_count == False:
                 if status_temp != "а" and status_temp != "о" and status_temp != "з":
                     status_temp = input(
-                        "Введите статус заметки буквой: А — Активный, О — Отменен, З — Завершен").lower()
+                        "Введите статус заметки буквой: А — Активный, О — Отменен, З — Завершен"
+                        ).lower()
                     status = (status_lib[status_temp])
-                    return status
-                    False
+                    return(status)
         elif request == 'нет':
             return
 
@@ -21,3 +21,4 @@ def update_status(): # :) нет слов и идей. Всё что я проб
 print("Желаете изменить статус заметки? Да/Нет") # не запускается. думаю
 request = input().lower()
 update_status(request)
+print(status)
