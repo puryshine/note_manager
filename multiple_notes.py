@@ -6,7 +6,7 @@ from datetime import datetime
 def multiple_notes(notes):
     while True:
         status_lib = {"а": 'Активный', "о": 'Отменен', "з": 'Завершен'}
-        title = input("Введите название заметки")
+        name = input("Введите имя пользователя")
         heads = input('Введите заголовок')
         content = input("Введите содержание заметки")
         status_temp = 0
@@ -27,7 +27,7 @@ def multiple_notes(notes):
             except ValueError:
                 print("Неверный формат даты, попробуйте ещё раз")
 
-        note = {"Название заметки": title,
+        note = {"Имя": name,
                 "Заголовки": heads,
                 "Содержание": content,
                 "Статус": status,
@@ -38,7 +38,7 @@ def multiple_notes(notes):
 
         for _ in range(len(notes)): # вызов названий заметок путем перебора всех имеющихся
             print(f'Заметка №{_ + 1}:')
-            print(notes[_].get("Название заметки"))
+            print(notes[_].get("Имя"), notes[_].get("Заголовки"))
 
         while True:
             add_input = input("Добавить ещё заметок? да/нет").lower()
