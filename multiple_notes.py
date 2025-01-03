@@ -36,12 +36,13 @@ while True:
             }
     notes.append(note)
 
-    for _ in range(len(notes)):
+    for _ in range(len(notes)): # вызов названий заметок путем перебора всех имеющихся
         print(f'Заметка №{_ + 1}:')
         print(notes[_].get("Название заметки"))
 
     while True:
         add_input = input("Добавить ещё заметок? да/нет").lower()
+        # используется add_input, т.к. add_input.py использвать не планирую
         if add_input == 'да':
             break
         elif add_input == 'нет':
