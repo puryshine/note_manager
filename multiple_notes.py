@@ -21,7 +21,7 @@ while True:
 
     while True:
         try:
-            issue_date = datetime.strptime(input("Введите деадлайн в формате ДД-ММ-ГГГГ"), '%d-%m-%Y')
+            issue_date = datetime.strptime(input("Введите дедлайн в формате ДД-ММ-ГГГГ"), '%d-%m-%Y')
             break
         except ValueError:
             print("Неверный формат даты, попробуйте ещё раз")
