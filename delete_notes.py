@@ -11,9 +11,15 @@ def delete_notes(notes):
     find_key = input("Введите имя пользователя или заголовок заметки \nкоторый желаете удалить").lower().strip()
     for _ in range(len(notes)):
         if find_key in notes[_].get('Имя') and notes[_].get("Заголовки"):
-            print(f"Такое имя пользователя/заголовок ({find_key}) найдено и удалено!")
-            print(f'Вот заметка: {notes[_].get("Имя"), notes[_].get("Заголовки")}')
-            notes.pop(_)
+            print(f"Такое имя пользователя/заголовок ({find_key}) найдено!")
+            print(f'Вот заметка: {notes[_].get("Имя"), notes[_].get("Заголовки")}') # В терминал
+            while True:
+                add_input = input("Удалить?(да/нет)").lower()
+                if add_input == "да":
+                    notes.pop(_)
+                    break
+                elif add_input == "нет":
+                    break
         else:
             print(f"{find_key} не найден")
     for _ in range(len(notes)):  # вызов названий заметок путем перебора всех имеющихся
