@@ -12,6 +12,11 @@ def delete_notes(notes):
     for _ in range(len(notes)):
         if find_key in notes[_].get('Имя') and notes[_].get("Заголовки"):
             print(f"Такое имя пользователя/заголовок ({find_key}) найдено и удалено!")
+            print(f'Вот заметка: {notes[_].get("Имя"), notes[_].get("Заголовки")}')
             notes.pop(_)
         else:
             print(f"{find_key} не найден")
+    for _ in range(len(notes)):  # вызов названий заметок путем перебора всех имеющихся
+        print("Текущий список заметок:")
+        print(f'Заметка №{_ + 1}:')
+        print(notes[_].get("Имя"), notes[_].get("Заголовки"))
