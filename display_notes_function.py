@@ -1,5 +1,10 @@
 from datetime import datetime
-def  display_notes_function(notes):
+
+
+def display_notes_function(notes):
+    if range(len(notes)) == 0:
+        print("Список заметок пуст")
+        break
     for _ in range(len(notes)):  # вызов названий заметок путем перебора всех имеющихся
         print("Текущий список заметок:")
         print(f'Заметка №{_ + 1}:')
@@ -8,5 +13,6 @@ def  display_notes_function(notes):
               f'Статус: {notes[_].get("Статус")}\n \n'
               f'Дата создания: {format(notes[_].get("Дата создания"), "%d-%m-%Y")}\n \n'
               f'Дата окончания: {format(notes[_].get("Дата окончания"), "%d-%m-%Y")}')
+    break
 
-# не тестил
+# не тестил. можно добавить сортировку по дате создания/дедлайна перед выводом. можно добавить окрашивание через colorama
