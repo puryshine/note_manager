@@ -28,7 +28,7 @@ def update_note_function():  # в задании нет перебора по з
             status = (status_lib[update_status(request)])
         else:
             print("Неверное имя поля, попробуйте ещё раз")
-
+        print(f'Текущие данные заметки:\n{note}')
         while True:
             add_input = input("Желаете обновить какое-то поле ещё?(да/нет)").lower()
             if add_input == 'да':
