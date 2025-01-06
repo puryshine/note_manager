@@ -37,3 +37,5 @@ def update_note_function():  # в задании нет перебора по з
                 break
         if add_input == 'нет':
             break
+
+# без теста
